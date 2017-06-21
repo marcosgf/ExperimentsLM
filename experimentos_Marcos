@@ -1,19 +1,21 @@
-Neste documento pode-se encontra alguns arquivos que foram usados para se basear na utilização do SRILM e alguns comandos utilizados para testes com o treinamento de modelos de língua
+Neste documento pode-se encontrar alguns arquivos que foram usados para se basear na utilização do SRILM e alguns comandos
+utilizados para testes com o treinamento de modelos de língua
 
-http://www.cs.brandeis.edu/~cs114/CS114_docs/SRILM_Tutorial_20080512.pdf
-../bin/i686-m64/ngram-count -text rnp.txt -order 3 -write rnp.count
+$ ../bin/i686-m64/ngram-count -text rnp.txt -order 3 -write rnp.count
 
-../bin/i686-m64/ngram-count -text rnp.txt -lm result
+$ ../bin/i686-m64/ngram-count -text rnp.txt -lm result
+
+$ ngram -lm LM -ppl TESTDATA -debug 2
+
+
+Para o documento abaixo, foi feito quase todos os testes com o SRILM que foram apresentados
+http://idiom.ucsd.edu/~rlevy/teaching/2015winter/lign165/lectures/lecture13/lecture13_ngrams_with_SRILM.pdf (calcular ppl com dois ou mais modelos [interpolação])
 
 http://googleweblight.com/?lite_url=http://okapiframework.org/wiki/index.php?title%3DSRILM_Installation_and_Running_Tutorial&ei=Liqmmcgl&lc=pt-BR&s=1&m=969&host=www.google.com.br&ts=1496190709&sig=ALNZjWmajZ9WiX7kV4oXsnmXeBH5BF3SLA
 
 http://www.speech.sri.com/projects/srilm/papers/icslp2002-srilm.pdf
 
-para testar o modelo com um arquivo de teste
-
-ngram -lm LM -ppl TESTDATA -debug 2
-
-http://idiom.ucsd.edu/~rlevy/teaching/2015winter/lign165/lectures/lecture13/lecture13_ngrams_with_SRILM.pdf (calcular ppl com dois ou mais modelos [interpolação])
+http://www.cs.brandeis.edu/~cs114/CS114_docs/SRILM_Tutorial_20080512.pdf
 
 https://mailman.speech.sri.com/pipermail/srilm-user/2011q3/001069.html (perguntar sobre adpatação de modelo de linguagem)
 
