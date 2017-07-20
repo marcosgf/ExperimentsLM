@@ -7,7 +7,7 @@ echo "Perplexity LM-GT3gram: "
 echo "----------------------------------"
 
 echo "LM-N4gram"
-./../kaldi/tools/srilm/bin/i686-m64/ngram-count -order 4 -cdiscount4 -cdiscount3 -cdiscount2 -cdiscount1 -text data_train.text -lm LM-N4gram.lm 
+./../kaldi/tools/srilm/bin/i686-m64/ngram-count -order 4 -cdiscount4 -1 -cdiscount3 -1 -cdiscount2 -1 -cdiscount1 -1 -text data_train.text -lm LM-N4gram.lm 
 echo "Perplexity LM-N4gram: "
 ./../kaldi/tools/srilm/bin/i686-m64/ngram -lm LM-N4gram.lm -ppl videoaula.text
 echo "----------------------------------"
@@ -19,7 +19,7 @@ echo "Perplexity LM-N04gram: "
 echo "----------------------------------"
 
 echo "LM-N3gram"
-./../kaldi/tools/srilm/bin/i686-m64/ngram-count -order 3 -cdiscount3 -cdiscount2 -cdiscount1 -text data_train.text -lm LM-N3gram.lm 
+./../kaldi/tools/srilm/bin/i686-m64/ngram-count -order 3 -cdiscount3 -1 -cdiscount2 -1 -cdiscount1 -1 -text data_train.text -lm LM-N3gram.lm 
 echo "Perplexity LM-N3gram: "
 ./../kaldi/tools/srilm/bin/i686-m64/ngram -lm LM-N3gram.lm -ppl videoaula.text
 echo "----------------------------------"
@@ -137,7 +137,7 @@ echo "----------------------------------"
 echo "!!!!!!!!INTERPOLATE!!!!!!!!!!!"
 version_model = LM-NI4gram
 echo "${version_model}"
-./../kaldi/tools/srilm/bin/i686-m64/ngram-count -order 4 -interpolate4 -interpolate3 -interpolate2 -cdiscount4 -cdiscount3 -cdiscount2 -cdiscount1 -text data_train.text -lm ${version_model}.lm 
+./../kaldi/tools/srilm/bin/i686-m64/ngram-count -order 4 -interpolate4 -interpolate3 -interpolate2 -cdiscount4 -1 -cdiscount3 -1 -cdiscount2 -1 -cdiscount1 -1 -text data_train.text -lm ${version_model}.lm 
 echo "Perplexity ${version_model}: "
 ./../kaldi/tools/srilm/bin/i686-m64/ngram -lm ${version_model}.lm -ppl videoaula.text
 echo "----------------------------------"
@@ -169,7 +169,5 @@ echo "${version_model}"
 echo "Perplexity ${version_model}: "
 ./../kaldi/tools/srilm/bin/i686-m64/ngram -lm ${version_model}.lm -ppl videoaula.text
 echo "----------------------------------"
-
-
 
 
